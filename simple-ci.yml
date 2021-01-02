@@ -15,7 +15,7 @@ steps:
   build:
     title: "Building Docker image"
     type: "build"
-    image_name: "kostiscodefresh/simple-web-app"
+    image_name: "tolrendor-software/simple-web-app"
     working_directory: "${{clone}}"
     tags:
     - "latest"
@@ -28,9 +28,9 @@ steps:
     type: image-enricher
     stage: "metadata"
     arguments:
-      IMAGE:  docker.io/kostiscodefresh/simple-web-app:latest
+      IMAGE:  ecr-tolrendor-software/tolrendor-software/simple-web-app:latest
       BRANCH: '${{CF_BRANCH}}'
-      REPO: 'kostis-codefresh/simple-web-app'
+      REPO: 'tolrendor-software/simple-web-app'
       GIT_PROVIDER_NAME: github-1
   jira-issue-extractor:
     title: Enrich image with jira issues
@@ -38,7 +38,7 @@ steps:
     stage: "metadata"
     fail_fast: false
     arguments:
-      IMAGE: docker.io/kostiscodefresh/simple-web-app:latest
+      IMAGE: ecr-tolrendor-software/tolrendor-software/simple-web-app:latest:latest
       JIRA_PROJECT_PREFIX: 'SAAS'
       MESSAGE: SAAS-8431
       JIRA_HOST: codefresh-io.atlassian.net
