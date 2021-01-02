@@ -48,7 +48,7 @@ steps:
     title: "Update k8s manifest"
     image: "mikefarah/yq" # The image in which command will be executed
     commands:
-      - yq eval -i 'spec.template.spec.containers[0].image = "d868143226472.dkr.ecr.eu-west-1.amazonaws.com/tolrendor-software/simple-web-app:${{CF_SHORT_REVISION}}"' deployment.yaml
+      - yq eval -i 'spec.template.spec.containers[0].image = "d868143226472.dkr.ecr.eu-west-1.amazonaws.com/tolrendor-software/simple-web-app:${{CF_SHORT_REVISION}}"' deployment.yml
       - cat deployment.yml
     working_directory: "${{clone_gitops}}" 
     stage: "gitops"
