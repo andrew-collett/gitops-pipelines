@@ -32,18 +32,6 @@ steps:
       BRANCH: '${{CF_BRANCH}}'
       REPO: 'andrew-collett/gitops-app-source-code'
       GIT_PROVIDER_NAME: github-1
-  jira-issue-extractor:
-    title: Enrich image with jira issues
-    type: jira-issue-extractor
-    stage: "metadata"
-    fail_fast: false
-    arguments:
-      IMAGE: 868143226472.dkr.ecr.eu-west-1.amazonaws.com/tolrendor-software/simple-web-app/tolrendor-software/simple-web-app:latest:latest
-      JIRA_PROJECT_PREFIX: 'SAAS'
-      MESSAGE: SAAS-8431
-      JIRA_HOST: codefresh-io.atlassian.net
-      JIRA_EMAIL: kostis@codefresh.io
-      JIRA_API_TOKEN: '${{JIRA_TOKEN}}'
     
     
 
