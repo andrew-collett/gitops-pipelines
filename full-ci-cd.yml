@@ -16,7 +16,7 @@ steps:
   build:
     title: "Building Docker image"
     type: "build"
-    image_name: "868143226472.dkr.ecr.eu-west-1.amazonaws.com/tolrendor-software/simple-web-app"
+    image_name: "tolrendor-software/simple-web-app"
     working_directory: "${{clone}}"
     tags:
     - "latest"
