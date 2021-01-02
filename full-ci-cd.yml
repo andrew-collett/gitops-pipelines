@@ -62,7 +62,7 @@ steps:
     stage: "gitops"
     arguments:
       repo: 'andrew-collett/gitops-kubernetes-configuration'
-      git: github-1
+      git: andrew-collett
       working_directory: '/codefresh/volume/gitops-kubernetes-configuration'
       commit_message: Updated manifest
       git_user_name: andrew-collett
