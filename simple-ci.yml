@@ -30,7 +30,7 @@ steps:
     arguments:
       IMAGE:  868143226472.dkr.ecr.eu-west-1.amazonaws.com/tolrendor-software/simple-web-app/tolrendor-software/simple-web-app:latest
       BRANCH: '${{CF_BRANCH}}'
-      REPO: 'tolrendor-software/simple-web-app'
+      REPO: 'andrew-collett/gitops-app-source-code'
       GIT_PROVIDER_NAME: github-1
   jira-issue-extractor:
     title: Enrich image with jira issues
